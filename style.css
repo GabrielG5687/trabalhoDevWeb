@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-color: white;
+    --bg-url:url(assets/assets/bg-mobile.jpg);
+    --stroke-color: rgb(255, 255, 255, 0.5);
+    --surface-color: rgb(255, 255, 255, 0.1);
+    --suferce-color-hover:rgb(255, 255, 255, 0.05);
+    --highlight-color: rgb(255, 255, 255, 0.2);
+    --switch-bg-url: url(assets/assets/moon-stars.svg);
+
+}
+
+.light{
+    --text-color: black;
+    --bg-url:url(assets/assets/bg-mobile-light.jpg);
+    --stroke-color: rgb(0, 0, 0, 0.5);
+    --surface-color: rgb(0, 0, 0, 0.1);
+    --suferce-color-hover:rgb(0, 0, 0, 0.02);
+    --highlight-color: rgb(0, 0, 0, 0.1);
+    --switch-bg-url: url(assets/assets/sun.svg);
+}
+
+body{
+    /* background-image: url(assets/assets/bg-mobile.jpg);
+    quantidade de vezes que uma imagem rept
+    background-repeat: no-repeat ;
+    faz o alinhamento da imagem
+    background-position: top center;
+    vai cobrir toda aria visivel
+    background-size: cover;      */
+
+    /* posso colocar tudo em um unico comando */
+    /* background: color image repeat position/size */
+    background: var(--bg-url) no-repeat top center/cover;
+}
+body *{
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+#container{
+    width: 360px;
+    margin: 56px auto 0px auto;
+    padding: 0 24px;
+}
+
+#profile{
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img{
+    width: 112px;
+}
+#profile p{
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+#switch{
+    position: relative;
+    width: 64px;
+    margin: 0 auto;
+    padding: 4px 0;
+}
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 1;
+
+}
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+
+
+ul{
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+
+ul li a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--surface-color);
+    padding: 16px 24px;
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(4px);
+    font-weight: 500;
+
+    transition: background 0.5s;
+}
+
+ul li a:hover{
+    background: var(--suferce-color-hover);
+    border: 1.5px solid var(--text-color);
+
+   
+
+}
+
+#social-links{
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+#social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 50%;
+    transition: background 0.2s ;
+}
+#social-links a:hover{
+    background: var(--highlight-color);
+    
+}
+
+footer{
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    #container {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    #profile img {
+        width: 80px;
+    }
+
+    ul {
+        gap: 12px;
+    }
+
+    ul li a {
+        padding: 12px 16px;
+    }
+
+    #social-links a {
+        padding: 12px;
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
