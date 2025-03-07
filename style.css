@@ -161,7 +161,6 @@ footer{
 
 
 /* Sobre mim */
-/* Sobre mim */
 .container {
     width: auto;
     max-width: 600px;
@@ -187,7 +186,7 @@ footer{
 
 .back-button {
     display: block;
-    margin: 20px 0;
+    margin: 20px auto;
     padding: 10px 20px;
     background: var(--highlight-color);
     color: var(--text-color);
@@ -196,6 +195,7 @@ footer{
     border: 1px solid var(--stroke-color);
     border-radius: 5px;
     transition: background 0.5s, border 0.5s;
+    width: fit-content;
 }
 
 .back-button:hover {
@@ -220,6 +220,49 @@ footer{
     align-items: center;
     justify-content: center;
     transform: translateY(-50%);
+}
+.container-contatos p {
+    text-align: left;
+    margin: 10px 0;
+}
+
+/*Projetos*/
+.container-projetos {
+    width: auto;
+    max-width: 600px;
+    margin: 50vh auto;
+    padding: 20px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+
+.container-projetos li {
+    text-align: left;
+    margin: 5px 0;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    width: 100%;
+}
+
+.container-projetos h2 {
+    margin: 10px 0;
+}
+
+.container-projetos button {
+    margin: 5px 0;
 }
 
 @media (max-width: 480px) {
